@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); /* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "mont";
+    src: url("./fonts/mont/Mont-Regular.otf");
+}
+@font-face {
+    font-family: "mont-light";
+    src: url("./fonts/mont/Mont-Light.otf");
+}
+
+@font-face {
+    font-family: "silk-flower";
+    src: url("./fonts/Silk Flower.otf");
+}
+@font-face {
+    font-family: "mont-bold";
+    src: url("./fonts/mont/Mont-Bold.otf");
+}
+.mont {
+    font-family: mont, serif;
+}
+.mont-light {
+    font-family: mont-light, serif;
+}
+
+.silk-flower {
+    font-family: silk-flower, serif;
+}
+.mont-bold {
+    font-family: mont-bold, serif;
+}
+.montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--dark-blue);
+}
+
+:root {
+    --dark-gray: #16171d;
+    --dark-blue: #10182a;
+    --color-cursor: #ffffff;
+    --cursor-outline-shade: 0.3;
+    --cursor-size: 10px;
+    --cursor-outline-size: 12px;
+}
+body {
+    overflow: hidden; /* Hide scrollbars */
+}
+
+/* Effet de lumière */
+.gradient-circle {
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+    z-index: 100;
+    top: -50px;
+    left: 20%;
+    height: 80px;
+    width: 100vw;
+    opacity: 0.5;
+    filter: blur(40px);
+    background: radial-gradient(
+            circle,
+            rgba(248, 107, 223, 1) 0%,
+            rgba(107, 107, 248, 0.8) 100%
+    );
+    animation: pulse 20s infinite;
+}
+.gradient-circle-bottom {
+    position: fixed;
+    pointer-events: none;
+    z-index: 100;
+    bottom: 0;
+    height: 40px;
+    width: 100vw;
+    opacity: 0.5;
+    filter: blur(40px);
+    background: radial-gradient(
+            circle,
+            rgba(248, 107, 223, 1) 0%,
+            rgba(107, 107, 248, 0.8) 100%
+    );
+    animation: pulse 20s infinite;
+}
+
+.gradient-shadow:hover::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+    transform: translate3d(0px, 20px, 0) scale(0.95);
+    filter: blur(20px);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/*
+* Prevents issues when the parent creates a
+* stacking context. (For example, using the transform
+* property )
+*/
+.gradient-shadow:hover::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(2);
+        translate: 20vw;
+    }
+    50% {
+        transform: scale(1);
+        translate: 0px;
+    }
+    66% {
+        transform: scale(2);
+        translate: -20vw;
+    }
+    100% {
+        transform: scale(1);
+        translate: 0px;
+    }
+}
+
+html {
+    cursor: none;
+    background: #e0e0e1;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.customcc {
+    width: 15px;
+    height: 15px;
+    background: var(--dark-blue);
+    border-radius: 50%;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 9999; /* assure que le curseur soit au dessus de tout le reste */
+    pointer-events: none; /* assure que le curseur n'interfère pas avec les éléments de la page */
+}
+.customcc-dark-theme {
+    width: 15px;
+    height: 15px;
+    background: var(--color-cursor);
+    border-radius: 50%;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 9999; /* assure que le curseur soit au dessus de tout le reste */
+    pointer-events: none; /* assure que le curseur n'interfère pas avec les éléments de la page */
+}
+a {
+    text-decoration: none;
+    cursor: none;
+}
+.neumorphism {
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow:
+            20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
+}
+.dark-neumorphism {
+    border-radius: 50px;
+    background: #16171c;
+    box-shadow:
+            29px 29px 058px #09090b,
+            -29px -29px 58px #23252d;
+}
+
+.text-gradient {
+    /* Fallback: Set a background color. */
+    background-color: red;
+    /* Create the gradient. */
+    background-image: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+    /*background-blend-mode: difference;
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+/*Underline style and animation*/
