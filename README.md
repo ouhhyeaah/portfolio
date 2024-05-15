@@ -1,35 +1,33 @@
-# portfolio
+# Louis Petitperrin's Portfolio.
 
-This template should help get you started developing with Vue 3 in Vite.
+## Project Stack
 
-## Recommended IDE Setup
+I'm using Vue.js and Vite
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+<div style="display:flex; gap:30px; justify-content:center; align-items:center">
+	<figure style="display:flex; flex-direction: column; justify-content:center; text-align:center">
+	    <img src="https://camo.githubusercontent.com/0b17e5a01574a2c1251b51c910c422f6ca6cb968a52686a770b668a634792c09/68747470733a2f2f7675656a732e6f72672f696d616765732f6c6f676f2e706e67" width="200">
+	    <figcaption style="just">Vue.js</figcaption>
+	</figure>
+		<span style="font-size:50px;">+</span>
+	<figure style="display:flex; flex-direction: column; justify-content:center; text-align:center">
+	    <img src="https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d735dce115937350e280abac98641c79d765da27c/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667" alt="Icon Vite" width="200">
+	    <figcaption style="just">Vite</figcaption>
+	</figure>
 
-## Customize configuration
+</div>
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Why did I choose these technologies ? Because I like to learn new things.
 
-## Project Setup
+And regarding the back-end side, no need in this project. All the data that I need are presents in the src/data folder. At first I was using a Firebase database. But when I started to implement everything, I didn't see much benefit in storing the data (which is light, and in very small quantities) in an external database.
 
-```sh
-npm install
-```
+## Deployment
 
-### Compile and Hot-Reload for Development
+Concerning the deployment, I'm using a Github Action, and gh-pages. This allows me to deploy and update my site by making a commit in my repository. I use an NPM command to automate this.
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+```json
+"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
 ```
