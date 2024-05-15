@@ -16,7 +16,20 @@
 
 <script setup>
 import { useDark } from "@vueuse/core";
+import { onMounted } from "vue";
 const isDark = useDark({
   selector: 'html',
+})
+onMounted(() => {
+  // const theme = localStorage.getItem('vueuse-color-scheme')
+  // const toggleButton = document.getElementById('toggleBtn')
+  // if (theme === "light") {
+  //   toggleButton.classList = 'button_untoggle'
+  // }else{
+  //   toggleButton.classList = "button_toggle"
+  // }
+  localStorage.clear()
+  localStorage.setItem("vueuse-color-scheme", "light")
+
 })
 </script>

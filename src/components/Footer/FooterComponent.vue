@@ -13,17 +13,15 @@ library.add(faArrowUp);
             <div class="mt-10 mx-auto">
                 <GetInTouchComponent class="mb-6" />
                 <SocialView title="true" justify_type="justify-center" />
-                <div class="mt-12 flex justify-center">
-                  <div class="flex justify-center gap-2 mont-light capitalize">
+                <div class="mt-12 flex justify-center gap-2">
+                  <div class="flex justify-center items-center gap-2 mont-light capitalize">
                     <span>
                       Made By
                     </span>
                       <a
                           href="https://linkedin.com/in/louis-petitperrin"
                           target="_blank"
-                          class="relative text-blue-400 hover:text-blue-300
-                    transition-all ease-in-out after:transition-[width] after:ease-in-out after:duration-500 after:absolute after:origin-left after:rounded-xl after:h-[2px] after:w-0 hover:after:w-[100%] after:bottom-[-1px] after:left-0 after:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_2px]
-                    ">
+                          class="underline-animation ">
                           Louis Petitperrin
                           <FontAwesomeIcon
                               class="rotate-45 align-sub"
@@ -31,10 +29,8 @@ library.add(faArrowUp);
                               size="xs"/>
                       </a>
                   </div>
-                  <span class="mx-2">|</span>
-                  <span class="mont-bold">
-                    2024
-                  </span>
+                    <span class="flex align-middle h-full"> | </span>
+                    <span class="mont-bold"> 2024 </span>
                 </div>
             </div>
         </div>

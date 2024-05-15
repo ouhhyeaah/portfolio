@@ -1,5 +1,4 @@
 <template>
-    <div class="flex gap-6 justify-evenly dark:text-white py-12 lg:w-4/5 mx-6 my-8 lg:mx-auto" :class="isDark ? 'dark-neumorphism' : 'neumorphism'">
       <div class="flex flex-col lg:p-10 px-8 w-full dark:text-white max-w-[60%]">
         <span class="md:text-6xl text-3xl pb-7 dark:text-white mont-bold"
         >
@@ -12,11 +11,10 @@
           <SocialView justify_type="justify-around" class="lg:text-6xl md:text-5xl text-3xl" size=16 />
         </div>
         <div class="flex justify-center">
-          <ResumeButton/>
+          <ResumeButton :isDark="isDark" />
         </div>
       </div>
       <DisplayImage class="my-auto mx-auto h-1/2 aspect-square mr-5" />
-    </div>
 </template>
 
 <script>

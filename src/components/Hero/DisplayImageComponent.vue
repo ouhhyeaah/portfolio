@@ -73,16 +73,6 @@ export default {
           id: 1,
           src: images.me_2,
           alt: "me"
-        },
-        {
-          id: 2,
-          src: images.me_3_bw,
-          alt: "me"
-        },
-        {
-          id: 3,
-          src: images.me_4,
-          alt: "me"
         }
       ]
     }
@@ -96,7 +86,7 @@ export default {
       setTimeout(() => {
         this.image = this.images[this.index];
         this.index = (this.index + 1) % this.images.length;
-      }, 3000);
+      }, 7000);
     }
   }
 }

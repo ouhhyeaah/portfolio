@@ -12,9 +12,10 @@
             >
                 <header
                     class="modal-header flex justify-between items-center px-4 py-2 rounded-t-lg"
+                    v-if="header"
                 >
                     <h2
-                        class="text-lg underline underline-offset-8"
+                        class="text-lg underline-animation"
                         id="modalTitle"
                     >
                         <slot name="header">Modal Title</slot>
@@ -45,10 +46,9 @@
                     <slot name="body"> Modal Body </slot>
                 </section>
 
-                <footer
-                    class="modal-footer flex justify-start px-4 py-4 rounded-b-lg text-blue-300"
-                >
-                    <slot name="footer"> </slot>
+                <footer class="modal-footer flex justify-start px-4 py-4 rounded-b-lg text-blue-300">
+                    <slot name="footer">
+                    </slot>
                 </footer>
                 <button
                     @click="close"
@@ -66,10 +66,11 @@
 export default {
     name: "ModalView",
     props: {
-        title: String,
-        description: String,
-        link: String,
-        isDark: Boolean,
+      title: String,
+      description: String,
+      link: String,
+      isDark: Boolean,
+      header: Boolean,
     },
     methods: {
         close() {

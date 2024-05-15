@@ -5,7 +5,7 @@ const projects = [
     description:
       "Creation of this website using Vue.js. I used Tailwind CSS for the design. The website is responsive and has a dark mode. This project is hosted on GitHub Pages. Thanks to this project i was able to learn Vue.js and Tailwind CSS, 2 technologies that i didn't know before.",
     date: "2024-02-25 12:00:00", //Format YYYY-MM-DD HH:MM:SS
-    link: "https://github.com/ouhhyeaah/portfolio-vuejs",
+    link: "https://github.com/ouhhyeaah/portfolio",
     keywords: ["Vue.js", "HTML", "Tailwind", "JavaScript"],
   },
   {

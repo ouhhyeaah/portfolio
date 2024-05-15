@@ -23,6 +23,7 @@
                     v-if="project.isModalVisible"
                     @close="closeModal(project)"
                     :is-dark="isDark"
+                    header="true"
                 >
                     <template v-slot:header>
                         {{ project.title }}
@@ -54,13 +55,12 @@
                         }}</span>
                     </template>
                     <template v-slot:footer>
-                        <a v-if="project.link" :href="project.link">{{
+                        <a class="underline-animation" v-if="project.link" :href="project.link">{{
                             project.link
                         }}</a>
-                        <span v-else
-                            >Unfortunately, this project is not available on
-                            GitHub</span
-                        >
+                        <span class="underline-animation" v-else>
+                          Unfortunately, this project is not available on GitHub
+                        </span>
                     </template>
                 </ModalView>
             </transition>

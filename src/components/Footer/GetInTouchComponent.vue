@@ -4,7 +4,7 @@
             <h2 class="capitalize text-2xl md:text-4xl mont-bold">
                 Get in touch
             </h2>
-            <p class="mt-8 text-lg font-normal">
+            <p class="mt-8 text-lg mont">
               You can send me over an e-mail on
               <a
                   rel="nofollow"

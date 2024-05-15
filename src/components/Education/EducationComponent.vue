@@ -1,7 +1,6 @@
 <template>
-  <section id="education" class="pt-20 flex justify-center ">
-    <div class="grid lg:grid-cols-2 lg:mx-24 lg:gap-12 grid-cols-1 ">
-      <div class="mx-auto p-10 dark:text-white mb-10"
+    <div class="grid lg:grid-cols-2 lg:mx-24 lg:gap-12 grid-cols-1 gap-10">
+      <div class="mx-auto p-10 dark:text-white"
            :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
              v-for="education in ref_educations " :key="education.id"
       >
@@ -12,8 +11,6 @@
         </p>
       </div>
     </div>
-
-  </section>
 </template>
 
 <script>
@@ -22,7 +19,7 @@ import educations from "@/data/educations";
 const ref_educations = ref(educations.reverse())
 export default {
   props: {
-    isDark: Boolean
+    isDark: Boolean,
   },
   setup() {
     return { ref_educations }

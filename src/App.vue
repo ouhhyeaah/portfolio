@@ -7,13 +7,27 @@
         class="customcc sm:block hidden md:block"
         :class="isDark ? 'customcc-dark-theme' : 'customcc'"
     ></div>
+    <header>
+      <NavBar />
+    </header>
+    <section class="flex gap-6 justify-evenly dark:text-white py-12 w-5/6 mx-auto mt-20 md:w-5/6"
+             :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
+    >
+      <HeroComponent :isDark="isDark" />
+    </section>
 
-    <NavBar />
-    <HeroComponent :isDark="isDark" />
-    <EducationView class="px-8" :isDark="isDark" />
-    <SkillsComponent />
-    <ProjectsComponent :isDark="isDark" />
-    <FooterView />
+    <section id="education" class="pt-20 flex justify-center ">
+      <EducationView class="px-8" :isDark="isDark" />
+    </section>
+    <section id="skills" class="pt-20">
+      <SkillsComponent />
+    </section>
+    <section>
+      <ProjectsComponent :isDark="isDark" />
+    </section>
+    <footer>
+      <FooterView />
+    </footer>
     <ScrollToTheTopButton />
 
   </div>

@@ -20,16 +20,15 @@ const ref_skills = ref(skills);
 </script>
 
 <template>
-    <section id="skills" class="pt-20">
         <div class="w-full h-auto flex flex-wrap justify-center">
-            <div class="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+            <div class="grid lg:grid-cols-4 gap-8 md:grid-cols-2 sm:grid-cols-1">
                 <div
                     v-for="skill in ref_skills"
                     :key="skill.id"
-                    class="flex justify-center"
+                    class="flex justify-center mb-10"
                 >
                     <div
-                        class="p-10 m-5 w-full col-span-2"
+                        class="p-10 w-full"
                         :class="isDark ? 'dark-neumorphism' : 'neumorphism'"
                     >
                         <span
@@ -73,7 +72,6 @@ const ref_skills = ref(skills);
                 </div>
             </div>
         </div>
-    </section>
 </template>
 
 <script>
