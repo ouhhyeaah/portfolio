@@ -5,14 +5,15 @@ const toggleDark = useToggle(isDark)
 
 const toggleAnimation = () => {
   const theme = localStorage.getItem('vueuse-color-scheme')
-  const toggleButton = document.getElementById('toggleBtn')
+  const toggleButton = document.getElementById("themeBtn")
   if (theme === "light") {
     toggleButton.classList = 'button_untoggle'
   }else{
     toggleButton.classList = "button_toggle"
   }
 }
-import ThemeToggle from '@/components/add-on/ThemeToggleComponent.vue'
+import ThemeToggleComponent from '@/components/add-on/ThemeToggleComponent.vue'
+import LanguageToggle from "@/components/add-on/LanguageToggle.vue";
 </script>
 
 <template>
@@ -37,8 +38,9 @@ import ThemeToggle from '@/components/add-on/ThemeToggleComponent.vue'
           </li>
         </a>
       </ul>
-      <ul class="h-full" @click="toggleAnimation" @load="toggleAnimation">
-        <ThemeToggle @click="toggleDark(), toggleAnimation()" id="toggleBtn" style="cursor: none" />
+      <ul class="flex gap-8" @click="toggleAnimation">
+        <LanguageToggle @click="toggleAnimation()" id="languageBtn"/>
+        <ThemeToggleComponent @click="toggleDark(), toggleAnimation()" id="themeBtn" />
       </ul>
     </div>
   </div>
@@ -59,8 +61,6 @@ export default {
     }
     if(theme === "auto") {
       toggleButton.classList = "button_toggle"
-      // toggleButton.classList.remove('button_untoggle')
-      // toggleButton.classList.add('button_toggle')
     }
   }
 }
@@ -68,11 +68,12 @@ export default {
 
 <style scoped>
 .button_toggle{
-  translate: 0% 150%;
-  transition: translate .7s;
+  position: relative;
+  transform: translateY(55%);
+  transition: transform .7s;
 }
 .button_untoggle{
-  translate: 0% 0%;
-  transition: translate .7s;
+  transform: translateY(0%);
+  transition: transform .7s;
 }
 </style>

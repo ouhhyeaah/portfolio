@@ -2,7 +2,7 @@
       <div class="flex flex-col lg:p-10 px-8 w-full dark:text-white max-w-[60%]">
         <span class="md:text-6xl text-3xl pb-7 dark:text-white mont-bold"
         >
-          Hello 👋
+          {{ $t('hero.hello') }} 👋
         </span>
         <span class="dark:text-white lg:text-3xl md:text-xl text-xs mont-light text-wrap text-left">
           I'm a cybersecurity student, but I'm also interested in different areas of computer science, such as programming.
